@@ -1,0 +1,24 @@
+<!-- Image representation -->
+<img *ngIf="current.image" (load)="loadingCompleted()" src="{{current.image.src}}" alt="{{current.image.alt}}" [class.hidden-xs-up]="current.image.loading" />
+
+<!-- No data image -->
+<span *ngIf="!current.image" class="fa-stack fa-5x">
+  <i class="fa fa-camera fa-stack-1x"></i>
+  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+</span>
+
+<!-- Loading spinner -->
+<i *ngIf="current.image && current.image.loading" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+<span *ngIf="current.image && current.image.loading" class="sr-only">Loading...</span>
+
+<!-- Navigation -->
+<a class="prev" (click)="prev()" [class.hidden-xs-up]="!current.index"
+                                 [class.disabled]="current.image && current.image.busy">
+  <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="next" (click)="next()" [class.hidden-xs-up]="!current.image || !images || !images.length || images.length == ( current.index + 1)"
+                                 [class.disabled]="current.image && current.image.busy">
+  <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+  <span class="sr-only">Next</span>
+</a>
