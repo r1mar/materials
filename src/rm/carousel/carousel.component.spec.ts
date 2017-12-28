@@ -17,8 +17,8 @@ describe('RmCarouselComponent', () => {
     fixture = TestBed.createComponent(CarouselComponent);
     component = fixture.componentInstance;
     component.images = [{
-      src: "http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg",
-      alt: "Pastel portrait"
+      src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+      alt: 'Pastel portrait'
     }];
     component.ngOnInit();
     fixture.detectChanges();
@@ -29,15 +29,12 @@ describe('RmCarouselComponent', () => {
   });
 
   describe('with exactly one image as object', () => {
-    let component: CarouselComponent;
-    let fixture: ComponentFixture<CarouselComponent>;
-
     beforeEach(() => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
       component.images = {
-        src: "http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg",
-        alt: "Pastel portrait"
+        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+        alt: 'Pastel portrait'
       };
       component.ngOnInit();
       fixture.detectChanges();
@@ -45,12 +42,12 @@ describe('RmCarouselComponent', () => {
 
     it('should has src attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').src).toEqual("http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg");
+      expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
     });
 
     it('should has alt attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').alt).toEqual("Pastel portrait");
+      expect(compiled.querySelector('img').alt).toEqual('Pastel portrait');
     });
 
     it('should has navigation links hidden', () => {
@@ -59,21 +56,20 @@ describe('RmCarouselComponent', () => {
       expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
     });
 
-    it("should throwing error by navigation", () =>{
-      expect(function(){component.next();}).toThrowError("there is only one image");
+    it('should throwing error by navigation', () => {
+      expect(function(){
+        component.next();
+      }).toThrowError('there is only one image');
     });
   });
 
   describe('with exactly one image as array', () => {
-    let component: CarouselComponent;
-    let fixture: ComponentFixture<CarouselComponent>;
-
     beforeEach(() => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
       component.images = [{
-        src: "http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg",
-        alt: "Pastel portrait"
+        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+        alt: 'Pastel portrait'
       }];
       component.ngOnInit();
       fixture.detectChanges();
@@ -81,12 +77,12 @@ describe('RmCarouselComponent', () => {
 
     it('should has src attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').src).toEqual("http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg");
+      expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
     });
 
     it('should has alt attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').alt).toEqual("Pastel portrait");
+      expect(compiled.querySelector('img').alt).toEqual('Pastel portrait');
     });
 
     it('should has navigation links hidden', () => {
@@ -97,21 +93,18 @@ describe('RmCarouselComponent', () => {
   });
 
   describe('with three images', () => {
-    let component: CarouselComponent;
-    let fixture: ComponentFixture<CarouselComponent>;
-
     beforeEach(() => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
       component.images = [{
-        src: "http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg",
-        alt: "Pastel portrait"
-      },{
-        src: "http://tm-portraits.de/Content/images/examples/Pastelportrait3.jpg",
-        alt: "Bleistiftporträt"
-      },{
-        src : "http://tm-portraits.de/Content/images/examples/Buntstiftportrait1.jpg",
-        alt : "Buntstiftporträt"
+        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+        alt: 'Pastel portrait'
+      }, {
+        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait3.jpg',
+        alt: 'Bleistiftporträt'
+      }, {
+        src : 'http://tm-portraits.de/Content/images/examples/Buntstiftportrait1.jpg',
+        alt : 'Buntstiftporträt'
       }];
       component.ngOnInit();
       fixture.detectChanges();
@@ -119,12 +112,12 @@ describe('RmCarouselComponent', () => {
 
     it('should has src attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').src).toEqual("http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg");
+      expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
     });
 
     it('should has alt attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').alt).toEqual("Pastel portrait");
+      expect(compiled.querySelector('img').alt).toEqual('Pastel portrait');
     });
 
     it('should prev link hidden and next link visible', () => {
@@ -141,12 +134,12 @@ describe('RmCarouselComponent', () => {
 
       it('should has src attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').src).toEqual("http://tm-portraits.de/Content/images/examples/Pastelportrait3.jpg");
+        expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait3.jpg');
       });
 
       it('should has alt attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').alt).toEqual("Bleistiftporträt");
+        expect(compiled.querySelector('img').alt).toEqual('Bleistiftporträt');
       });
 
       it('should prev link visible and next link visible', () => {
@@ -165,12 +158,12 @@ describe('RmCarouselComponent', () => {
 
       it('should has src attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').src).toEqual("http://tm-portraits.de/Content/images/examples/Buntstiftportrait1.jpg");
+        expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Buntstiftportrait1.jpg');
       });
 
       it('should has alt attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').alt).toEqual("Buntstiftporträt");
+        expect(compiled.querySelector('img').alt).toEqual('Buntstiftporträt');
       });
 
       it('should prev link visible and next link hidden', () => {
@@ -188,7 +181,7 @@ describe('RmCarouselComponent', () => {
       });
 
       it('should throwing exception', () => {
-        expect(function(){component.next()}).toThrowError("Last image reached");
+        expect(function(){component.next()}).toThrowError('Last image reached');
       });
 
     });
@@ -199,11 +192,11 @@ describe('RmCarouselComponent', () => {
       });
 
       it('should throwing exception', () => {
-        expect(function(){component.prev()}).toThrowError("First image reached");
+        expect(function(){component.prev()}).toThrowError('First image reached');
       });
 
     });
-    
+
     describe('go back to begin', () => {
 
       beforeEach(() => {
@@ -216,12 +209,12 @@ describe('RmCarouselComponent', () => {
 
       it('should has src attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').src).toEqual("http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg");
+        expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
       });
 
       it('should has alt attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').alt).toEqual("Pastel portrait");
+        expect(compiled.querySelector('img').alt).toEqual('Pastel portrait');
       });
 
       it('should prev link hidden and next link visible', () => {
@@ -235,9 +228,6 @@ describe('RmCarouselComponent', () => {
   });
 
   describe('with empty images array', () => {
-    let component: CarouselComponent;
-    let fixture: ComponentFixture<CarouselComponent>;
-
     beforeEach(() => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
@@ -262,14 +252,14 @@ describe('RmCarouselComponent', () => {
       expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
     });
 
-    it("should throw an erro by navigation", ()=>{
-      expect(function(){component.next();}).toThrowError("there is no images for navigation");
+    it('should throw an erro by navigation', () => {
+      expect(function(){
+        component.next();
+      }).toThrowError('there is no images for navigation');
     });
   });
 
   describe('with images as undefined', () => {
-    let component: CarouselComponent;
-    let fixture: ComponentFixture<CarouselComponent>;
 
     beforeEach(() => {
       fixture = TestBed.createComponent(CarouselComponent);

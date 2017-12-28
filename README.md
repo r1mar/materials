@@ -1,6 +1,38 @@
-# ImgViewer
+# Materials
+[![Windows Build][appveyor-image]][appveyor-url]
+[![Linux Build][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][gemnasium-image]][gemnasium-url]
+
+This project contains custom components missed in angular materials2.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+
+## Components
+
+* Carousel
+
+An Image Carousel.
+[![Carousel Example][carousel-image]]
+
+Using in template:
+```
+<rm-carousel [images]="images">
+  ... loading carousel
+ </rm-carousel>
+```
+Images can be an object with attributes "src" and "alt" for only one image or an array of such objects.
+
+* Image-Viewer
+[![Image-Viewer Example][img-viewer-image]]
+
+An image preview for an array of objects with attributes "src" and "alt". Using in template:
+```
+<rm-img-viewer [images]="images4">
+  ..Loading img-viewer
+</rm-img-viewer>
+``` 
+
 
 ## Development server
 
@@ -26,3 +58,14 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+[appveyor-image]: https://img.shields.io/appveyor/ci/richard-martens/materials/master.svg?label=windows
+[appveyor-url]: https://ci.appveyor.com/project/richard-martens/materials
+[travis-image]: https://img.shields.io/travis/richard-martens/materials/master.svg?label=linux
+[travis-url]: https://travis-ci.org/richard-martens/materials
+[coveralls-image]: https://img.shields.io/coveralls/richard-martens/materials/master.svg
+[coveralls-url]: https://coveralls.io/r/richard-martens/materials?branch=master
+[gemnasium-image]: https://gemnasium.com/richard-martens/materials.svg
+[gemnasium-url]: https://gemnasium.com/richard-martens/materials
+[carousel-image]: assets/carousel-example.png
+[img-viewer-image]: assets/img-viewer-example.png

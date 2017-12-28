@@ -10,47 +10,52 @@ export class ImgViewerComponent implements OnInit {
 
     @Input() images;
 
-    //max scroll position to the right
-    maxScrollHorizontal: number = 0;
+    // max scroll position to the right
+    maxScrollHorizontal = 0;
 
-    //min scroll position to the left
-    minScrollHorizontal: number = 0;
+    // min scroll position to the left
+    minScrollHorizontal = 0;
 
-    //calculated next scroll position
-    scrollPos: number = 0;
+    // calculated next scroll position
+    scrollPos = 0;
 
     constructor(private elementRef: ElementRef) {
     }
 
     ngOnInit() {
         this.initScrollRanges();
+        // nav to next will disabled only after an interrrupt
+        setTimeout(function () {
+            this.initScrollRanges();
+        }.bind(this), 1);
+
         this.scrollPos = 0;
     }
 
     public next() {
-        var oScrollContainer = this.elementRef.nativeElement.getElementsByClassName("scroll-container")[0],
-            oCoord,
+        const oScrollContainer = this.elementRef.nativeElement.getElementsByClassName('scroll-container')[0];
+        let oCoord,
             oImage;
 
         if (!oScrollContainer.children.length) {
-            throw new Error("Navigation works only with given images");
+            throw new Error('Navigation works only with given images');
         }
 
         if (oScrollContainer.scrollLeft + oScrollContainer.clientWidth > this.maxScrollHorizontal) {
-            //end of scrolling area reached
+            // end of scrolling area reached
             oScrollContainer.scrollLeft = this.maxScrollHorizontal;
 
         } else {
-            //middle of scrolling area
+            // middle of scrolling area
             oScrollContainer.scrollLeft = oScrollContainer.scrollLeft + oScrollContainer.clientWidth;
 
             oCoord = oScrollContainer.getClientRects()[0];
 
-            //try to get the image truncated on right side
+            // try to get the image truncated on right side
             oImage = this.getimageAt(Math.round(oCoord.x),
                 Math.round(oCoord.y + oScrollContainer.children[0].offsetTop));
             if (oImage) {
-                //scroll truncated image into view
+                // scroll truncated image into view
                 oScrollContainer.scrollLeft = oImage.offsetLeft - this.minScrollHorizontal;
             }
 
@@ -61,14 +66,14 @@ export class ImgViewerComponent implements OnInit {
     }
 
     public prev() {
-        var oScrollContainer = this.elementRef.nativeElement.getElementsByClassName("scroll-container")[0],
-            oCoord,
+        const oScrollContainer = this.elementRef.nativeElement.getElementsByClassName('scroll-container')[0];
+        let oCoord,
             oImage;
 
         if (!oScrollContainer.children.length) {
-            throw new Error("Navigation works only with given images");
+            throw new Error('Navigation works only with given images');
         }
-        
+
         if (oScrollContainer.scrollLeft - oScrollContainer.clientWidth < this.minScrollHorizontal) {
             oScrollContainer.scrollLeft = 0;
 
@@ -77,12 +82,13 @@ export class ImgViewerComponent implements OnInit {
 
             oCoord = oScrollContainer.getClientRects()[0];
 
-            //try to get the image truncated on left side
+            // try to get the image truncated on left side
             oImage = this.getimageAt(Math.round(oCoord.x + oCoord.width - 1),
                 Math.round(oCoord.y + oScrollContainer.children[0].offsetTop));
-            //calculate the right frame of viewport 
+            // calculate the right frame of viewport
             if (oImage) {
-                oScrollContainer.scrollLeft = oImage.offsetLeft + oImage.clientWidth + this.minScrollHorizontal - oScrollContainer.clientWidth;
+                oScrollContainer.scrollLeft = oImage.offsetLeft + oImage.clientWidth
+                    + this.minScrollHorizontal - oScrollContainer.clientWidth;
             }
         }
 
@@ -90,9 +96,9 @@ export class ImgViewerComponent implements OnInit {
     }
 
     private getimageAt(x: number, y: number): Element {
-        var oElements = document.elementsFromPoint(x, y);
+        const oElements = document.elementsFromPoint(x, y);
 
-        //if an array contains only one image, then the result ist the image 
+        // if an array contains only one image, then the result ist the image
         return oElements.find(function (oCurrent) {
             if (oCurrent instanceof HTMLImageElement) {
                 return true;
@@ -101,9 +107,9 @@ export class ImgViewerComponent implements OnInit {
     }
 
     private initScrollRanges() {
-        var oScrollContainer = this.elementRef.nativeElement.getElementsByClassName("scroll-container")[0];
+        const oScrollContainer = this.elementRef.nativeElement.getElementsByClassName('scroll-container')[0];
 
-        if(!oScrollContainer.children.length) {
+        if (!oScrollContainer.children.length) {
             return;
         }
 
