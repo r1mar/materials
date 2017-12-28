@@ -15,11 +15,22 @@ matrix:
   allow_failures:
     # Allow the nightly installs to fail
     - env: "NVM_NODEJS_ORG_MIRROR=https://nodejs.org/download/nightly"
-sudo: false
+sudo: required
+dist: trusty
 cache:
   directories:
     - node_modules
+apt:
+  sources:
+    - google-chrome
+  packages:
+    - google-chrome-stable
+    - google-chrome-beta
 before_install:
+  # init chrome
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
   # Remove all non-test dependencies
   - "npm rm --save-dev connect-redis"
 
