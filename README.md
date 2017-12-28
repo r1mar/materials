@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Carousel
 
 An Image Carousel.
-[![Carousel Example][carousel-image]]
+![Carousel Example](assets/carousel-example.png)
 
 Using in template:
 ```
@@ -24,7 +24,7 @@ Using in template:
 Images can be an object with attributes "src" and "alt" for only one image or an array of such objects.
 
 * Image-Viewer
-[![Image-Viewer Example][img-viewer-image]]
+![Image-Viewer Example](assets/img-viewer-example.png)
 
 An image preview for an array of objects with attributes "src" and "alt". Using in template:
 ```
@@ -67,5 +67,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [coveralls-url]: https://coveralls.io/r/richard-martens/materials?branch=master
 [gemnasium-image]: https://gemnasium.com/richard-martens/materials.svg
 [gemnasium-url]: https://gemnasium.com/richard-martens/materials
-[carousel-image]: /assets/carousel-example.png
-[img-viewer-image]: /assets/img-viewer-example.png
