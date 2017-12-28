@@ -9,6 +9,7 @@ install:
   - npm rm --save-dev connect-redis
   - if exist node_modules npm prune
   - if exist node_modules npm rebuild
+  - npm install -g angular-cli
   - npm install
 build: off
 test_script:
