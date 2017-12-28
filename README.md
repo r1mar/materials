@@ -67,5 +67,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [coveralls-url]: https://coveralls.io/r/richard-martens/materials?branch=master
 [gemnasium-image]: https://gemnasium.com/richard-martens/materials.svg
 [gemnasium-url]: https://gemnasium.com/richard-martens/materials
-[carousel-image]: ./assets/carousel-example.png
-[img-viewer-image]: ./assets/img-viewer-example.png
+[carousel-image]: /assets/carousel-example.png
+[img-viewer-image]: /assets/img-viewer-example.png

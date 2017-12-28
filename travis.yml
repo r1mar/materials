@@ -28,7 +28,7 @@ before_install:
   - "test ! -d node_modules || npm rebuild"
 
   # Install angular-cli
-  - npm install -g angular-cli
+  - npm install -g @angular/cli
 script:
   - "ng build" 
   - "ng test --single-run --no-progress --code-coverage"
