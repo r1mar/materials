@@ -13,9 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Carousel
 
 An Image Carousel.
-![Carousel Example](assets/carousel.jpg "Carousel component")
-
-![Carousel Example](assets/carousel.jpg "Carousel component")
+![Carousel Example](assets/carousel-example.png "Carousel component")
 
 Using in template:
 ```
