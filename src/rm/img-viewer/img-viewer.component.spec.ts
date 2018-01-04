@@ -103,11 +103,11 @@ describe('ImgViewerComponent', () => {
     });
 
     it('navigation links should throw an error', () => {
-      expect(function(){
+      expect(function() {
         component.prev();
       }).toThrowError('Navigation works only with given images');
 
-      expect(function(){
+      expect(function() {
         component.next();
       }).toThrowError('Navigation works only with given images');
     });

@@ -57,7 +57,7 @@ describe('RmCarouselComponent', () => {
     });
 
     it('should throwing error by navigation', () => {
-      expect(function(){
+      expect(function() {
         component.next();
       }).toThrowError('there is only one image');
     });
@@ -181,7 +181,9 @@ describe('RmCarouselComponent', () => {
       });
 
       it('should throwing exception', () => {
-        expect(function(){component.next()}).toThrowError('Last image reached');
+        expect(function() {
+          component.next();
+        }).toThrowError('Last image reached');
       });
 
     });
@@ -192,7 +194,9 @@ describe('RmCarouselComponent', () => {
       });
 
       it('should throwing exception', () => {
-        expect(function(){component.prev()}).toThrowError('First image reached');
+        expect(function() {
+          component.prev();
+        }).toThrowError('First image reached');
       });
 
     });
@@ -253,7 +257,7 @@ describe('RmCarouselComponent', () => {
     });
 
     it('should throw an erro by navigation', () => {
-      expect(function(){
+      expect(function() {
         component.next();
       }).toThrowError('there is no images for navigation');
     });
