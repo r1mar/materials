@@ -1,6 +1,6 @@
 {
   "name": "rm-materials",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
     "prebuild": "npm run bundle",
     "build": "tsc & ngc",
     "postbuild": "node tools/removecode.js & npm run copy",
-    "publish": "cd ./dist && npm publish",
+    "prepublish": "npm run build",
+    "publish": "cd ./dist && npm publish ./ --tag beta",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
