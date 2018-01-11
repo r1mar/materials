@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { ImgViewerComponent } from './img-viewer/img-viewer.component';
@@ -13,6 +14,7 @@ import { ImgViewerComponent } from './img-viewer/img-viewer.component';
     ImgViewerComponent
   ],
   imports: [
+    CommonModule
   ],
   providers: [],
   bootstrap: []
