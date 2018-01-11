@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { ElementRef } from '@angular/core';
 
 @Component({
-    selector: 'rm-img-viewer',
+    selector: 'rm-materials-img-viewer',
     templateUrl: './img-viewer.component.html',
     styleUrls: ['./img-viewer.component.css']
 })

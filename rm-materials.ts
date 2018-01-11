@@ -10,4 +10,4 @@
  * @description
  * Entry point for all public APIs of this package.
  */
-export * from './src/rm/rm.module';
+export * from './src/rm-materials/rm-materials.module';

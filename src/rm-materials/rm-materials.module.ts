@@ -17,4 +17,4 @@ import { ImgViewerComponent } from './img-viewer/img-viewer.component';
   providers: [],
   bootstrap: []
 })
-export class RmModule { }
+export class RmMaterialsModule { }
