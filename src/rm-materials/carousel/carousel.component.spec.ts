@@ -17,7 +17,7 @@ describe('RmCarouselComponent', () => {
     fixture = TestBed.createComponent(CarouselComponent);
     component = fixture.componentInstance;
     component.images = [{
-      src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+      src: './assets/pastelzeichnung1.jpg',
       alt: 'Pastel portrait'
     }];
     component.ngOnInit();
@@ -33,7 +33,7 @@ describe('RmCarouselComponent', () => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
       component.images = {
-        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+        src: './assets/pastelzeichnung2.jpg',
         alt: 'Pastel portrait'
       };
       component.ngOnInit();
@@ -42,7 +42,7 @@ describe('RmCarouselComponent', () => {
 
     it('should has src attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
+      expect(compiled.querySelector('img').src).toEqual('http://localhost:9876/assets/pastelzeichnung2.jpg');
     });
 
     it('should has alt attribute assigned', () => {
@@ -68,7 +68,7 @@ describe('RmCarouselComponent', () => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
       component.images = [{
-        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+        src: './assets/pastelzeichnung1.jpg',
         alt: 'Pastel portrait'
       }];
       component.ngOnInit();
@@ -77,7 +77,7 @@ describe('RmCarouselComponent', () => {
 
     it('should has src attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
+      expect(compiled.querySelector('img').src).toEqual('http://localhost:9876/assets/pastelzeichnung1.jpg');
     });
 
     it('should has alt attribute assigned', () => {
@@ -97,13 +97,13 @@ describe('RmCarouselComponent', () => {
       fixture = TestBed.createComponent(CarouselComponent);
       component = fixture.componentInstance;
       component.images = [{
-        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg',
+        src: './assets/pastelzeichnung1.jpg',
         alt: 'Pastel portrait'
       }, {
-        src: 'http://tm-portraits.de/Content/images/examples/Pastelportrait3.jpg',
+        src: './assets/bleistiftzeichnung1.jpg',
         alt: 'Bleistiftporträt'
       }, {
-        src : 'http://tm-portraits.de/Content/images/examples/Buntstiftportrait1.jpg',
+        src : './assets/buntstiftzeichnung1.jpg',
         alt : 'Buntstiftporträt'
       }];
       component.ngOnInit();
@@ -112,7 +112,7 @@ describe('RmCarouselComponent', () => {
 
     it('should has src attribute assigned', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
+      expect(compiled.querySelector('img').src).toEqual('http://localhost:9876/assets/pastelzeichnung1.jpg');
     });
 
     it('should has alt attribute assigned', () => {
@@ -134,7 +134,7 @@ describe('RmCarouselComponent', () => {
 
       it('should has src attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait3.jpg');
+        expect(compiled.querySelector('img').src).toEqual('http://localhost:9876/assets/bleistiftzeichnung1.jpg');
       });
 
       it('should has alt attribute assigned', () => {
@@ -158,7 +158,7 @@ describe('RmCarouselComponent', () => {
 
       it('should has src attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Buntstiftportrait1.jpg');
+        expect(compiled.querySelector('img').src).toEqual('http://localhost:9876/assets/buntstiftzeichnung1.jpg');
       });
 
       it('should has alt attribute assigned', () => {
@@ -213,7 +213,7 @@ describe('RmCarouselComponent', () => {
 
       it('should has src attribute assigned', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('img').src).toEqual('http://tm-portraits.de/Content/images/examples/Pastelportrait4.jpg');
+        expect(compiled.querySelector('img').src).toEqual('http://localhost:9876/assets/pastelzeichnung1.jpg');
       });
 
       it('should has alt attribute assigned', () => {
