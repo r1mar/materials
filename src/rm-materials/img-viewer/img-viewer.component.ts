@@ -27,7 +27,9 @@ export class ImgViewerComponent implements OnInit {
         // nav to next will disabled only after an interrrupt
         setTimeout(function () {
             this.initScrollRanges();
-        }.bind(this), 1);
+            // 100ms is enough for refresh, but not for first buiild + start
+            // 325ms is enough for first build + start
+        }.bind(this), 325);
 
         this.scrollPos = 0;
     }

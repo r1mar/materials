@@ -1,6 +1,6 @@
 {
   "name": "rm-materials",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
     "node": ">= 6.10"
   },
   "scripts": {
-    "copy": "node tools/copy-package.js",
+    "copy": "node tools/copy.js",
     "prebundle": "rimraf dist",
     "bundle": "rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js",
     "ng": "ng",
@@ -49,6 +49,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ncp": "^2.0.0",
     "node-sass": "^4.7.2",
     "protractor": "~5.2.2",
     "rollup": "^0.54.0",

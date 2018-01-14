@@ -2,11 +2,11 @@
   <img *ngFor="let image of images" src="{{image.src}}" alt="{{image.alt}}" />
 </div>
 
-<a [class.hidden-xs-up]="scrollPos <= 0" [class.prev]="true" (click)="prev()">
+<a [class.hidden]="scrollPos <= 0" [class.prev]="true" (click)="prev()">
   <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
   <span class="sr-only">Previous</span>
 </a>
-<a [class.hidden-xs-up]="scrollPos >= maxScrollHorizontal" [class.next]="true" (click)="next()">
+<a [class.hidden]="scrollPos >= maxScrollHorizontal" [class.next]="true" (click)="next()">
   <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
   <span class="sr-only">Next</span>
 </a>

@@ -58,3 +58,7 @@ a.prev i {
 a.next i {
     right: 1%;
 }
+
+.hidden {
+    display: none;
+}

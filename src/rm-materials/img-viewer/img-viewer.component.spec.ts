@@ -11,7 +11,7 @@ describe('ImgViewerComponent', () => {
     sTag: string,
     bHidden) {
     const aNav = oFixture.debugElement.query(By.css(sTag)),
-      oMatcher = expect(aNav.classes['hidden-xs-up']);
+      oMatcher = expect(aNav.classes['hidden']);
 
     if (bHidden) {
       oMatcher.toBeTruthy();

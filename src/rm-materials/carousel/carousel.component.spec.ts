@@ -52,8 +52,8 @@ describe('RmCarouselComponent', () => {
 
     it('should has navigation links hidden', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden-xs-up');
-      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
+      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden');
+      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden');
     });
 
     it('should throwing error by navigation', () => {
@@ -87,8 +87,8 @@ describe('RmCarouselComponent', () => {
 
     it('should has navigation links hidden', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden-xs-up');
-      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
+      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden');
+      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden');
     });
   });
 
@@ -122,8 +122,8 @@ describe('RmCarouselComponent', () => {
 
     it('should prev link hidden and next link visible', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden-xs-up');
-      expect(compiled.querySelector('a.next').getAttribute('class')).not.toContain('hidden-xs-up');
+      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden');
+      expect(compiled.querySelector('a.next').getAttribute('class')).not.toContain('hidden');
     });
 
     describe('go to middle', () => {
@@ -144,8 +144,8 @@ describe('RmCarouselComponent', () => {
 
       it('should prev link visible and next link visible', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('a.prev').getAttribute('class')).not.toContain('hidden-xs-up');
-        expect(compiled.querySelector('a.next').getAttribute('class')).not.toContain('hidden-xs-up');
+        expect(compiled.querySelector('a.prev').getAttribute('class')).not.toContain('hidden');
+        expect(compiled.querySelector('a.next').getAttribute('class')).not.toContain('hidden');
       });
     });
 
@@ -168,8 +168,8 @@ describe('RmCarouselComponent', () => {
 
       it('should prev link visible and next link hidden', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('a.prev').getAttribute('class')).not.toContain('hidden-xs-up');
-        expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
+        expect(compiled.querySelector('a.prev').getAttribute('class')).not.toContain('hidden');
+        expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden');
       });
     });
 
@@ -223,8 +223,8 @@ describe('RmCarouselComponent', () => {
 
       it('should prev link hidden and next link visible', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden-xs-up');
-        expect(compiled.querySelector('a.next').getAttribute('class')).not.toContain('hidden-xs-up');
+        expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden');
+        expect(compiled.querySelector('a.next').getAttribute('class')).not.toContain('hidden');
       });
 
     });
@@ -252,8 +252,8 @@ describe('RmCarouselComponent', () => {
 
     it('should has navigation links hidden', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden-xs-up');
-      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
+      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden');
+      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden');
     });
 
     it('should throw an erro by navigation', () => {
@@ -284,8 +284,8 @@ describe('RmCarouselComponent', () => {
 
     it('should has navigation links hidden', () => {
       const compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden-xs-up');
-      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden-xs-up');
+      expect(compiled.querySelector('a.prev').getAttribute('class')).toContain('hidden');
+      expect(compiled.querySelector('a.next').getAttribute('class')).toContain('hidden');
     });
   });
 
