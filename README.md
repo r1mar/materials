@@ -17,9 +17,9 @@ An Image Carousel.
 
 Using in template:
 ```
-<rm-carousel [images]="images">
+<rm-materials-carousel [images]="images">
   ... loading carousel
- </rm-carousel>
+ </rm-materials-carousel>
 ```
 Images can be an object with attributes "src" and "alt" for only one image or an array of such objects.
 
@@ -28,15 +28,32 @@ Images can be an object with attributes "src" and "alt" for only one image or an
 
 An image preview for an array of objects with attributes "src" and "alt". Using in template:
 ```
-<rm-img-viewer [images]="images4">
+<rm-materials-img-viewer [images]="images4">
   ..Loading img-viewer
-</rm-img-viewer>
+</rm-materials-img-viewer>
 ``` 
+Styling
+```
+rm-materials-img-viewer, rm-materials-img-viewer div img {
+    height: 200px;
+}
+```
 
+## Install
+
+Use npm to install
+```
+npm install rm-materials --save
+```
+Include font-awesome into your site using cdn
+```
+  <!--Installing font-awesome via cdn-->
+  <script src="https://use.fontawesome.com/494a603944.js"></script>
+```
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is only tools repository. It can not run. Create a test angular application for testing. 
 
 ## Code scaffolding
 
@@ -44,16 +61,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
